@@ -1,8 +1,11 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzE2NDA1MzJ9.2_Y_qbGBrHhDjkhAfx143XVHqHuWR8Cb9hXP9npBK0U
+@hostname = http://localhost:3000
+
 ### PRODUCTS INDEX
-GET http://localhost:3000/products
+GET {{hostname}}/products
 
 ### PRODUCTS CREATE
-POST http://localhost:3000/products
+POST {{hostname}}/products
 Content-Type: application/json
 
 {
@@ -14,12 +17,12 @@ Content-Type: application/json
 }
 
 ### PRODUCTS SHOW
-GET http://localhost:3000/products/2
+GET {{hostname}}/products/2
 
 ### PRODUCTS UPDATE
-PATCH http://localhost:3000/products/5
+PATCH {{hostname}}/products/5
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2MzgyMzR9.dmbCEjvXIWVdC-LQHH41IPj4a18DV_F-u1onToJgppQ
+Authorization: Bearer {{jwt}}
 
 {
   "inventory": 20,
@@ -27,10 +30,10 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2MzgyM
 }
 
 ### PRODUCTS DESTROY
-DELETE http://localhost:3000/products/8
+DELETE {{hostname}}/products/8
 
 ### Users create (signup)
-POST http://localhost:3000/users
+POST {{hostname}}/users
 Content-Type: application/json
 
 {
@@ -41,23 +44,23 @@ Content-Type: application/json
 }
 
 ### Sessions create (login)
-POST http://localhost:3000/sessions
+POST {{hostname}}/sessions
 Content-Type: application/json
 
 {
-  "email": "cheddar@gmail.com",
+  "email": "ace@gmail.com",
   "password": "password"
 }
 
 ### Orders INDEX
-GET http://localhost:3000/orders
+GET {{hostname}}/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzE2MzgxMTV9.kZB9NEMXAZ8iCf40XYeNQrbWr70E0VXuKdf2T88hwW8
+Authorization: Bearer {{jwt}}
 
 ### Orders create
-POST http://localhost:3000/orders
+POST {{hostname}}/orders
 Content-Type: application/json
-# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzEzOTE3MTB9.5X87c-C6NMUz8HZt91eu_EWCFJogPQqSGVZIlErqBVg
+Authorization: Bearer {{jwt}}
 
 {
   "product_id": 6,
@@ -65,6 +68,6 @@ Content-Type: application/json
 }
 
 ### Orders SHOW
-GET http://localhost:3000/orders/2
+GET {{hostname}}/orders/2
 Content-Type: application/json
-# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzEzOTE3MTB9.5X87c-C6NMUz8HZt91eu_EWCFJogPQqSGVZIlErqBVg
+Authorization: Bearer {{jwt}}
