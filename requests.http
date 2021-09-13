@@ -17,11 +17,13 @@ Content-Type: application/json
 GET http://localhost:3000/products/2
 
 ### PRODUCTS UPDATE
-PATCH http://localhost:3000/products/1
+PATCH http://localhost:3000/products/5
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2MzgyMzR9.dmbCEjvXIWVdC-LQHH41IPj4a18DV_F-u1onToJgppQ
 
 {
-  "inventory": 15
+  "inventory": 20,
+  "description": "For real, for real this time"
 }
 
 ### PRODUCTS DESTROY
@@ -50,12 +52,12 @@ Content-Type: application/json
 ### Orders INDEX
 GET http://localhost:3000/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzEzOTMwNDN9.8ITta5l6RpgXyUACq_dWSZfUykxFM6UibJmHdCDpSow
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzE2MzgxMTV9.kZB9NEMXAZ8iCf40XYeNQrbWr70E0VXuKdf2T88hwW8
 
 ### Orders create
 POST http://localhost:3000/orders
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzEzOTE3MTB9.5X87c-C6NMUz8HZt91eu_EWCFJogPQqSGVZIlErqBVg
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzEzOTE3MTB9.5X87c-C6NMUz8HZt91eu_EWCFJogPQqSGVZIlErqBVg
 
 {
   "product_id": 6,
@@ -65,4 +67,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzEzOTE3M
 ### Orders SHOW
 GET http://localhost:3000/orders/2
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzEzOTE3MTB9.5X87c-C6NMUz8HZt91eu_EWCFJogPQqSGVZIlErqBVg
+# Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzEzOTE3MTB9.5X87c-C6NMUz8HZt91eu_EWCFJogPQqSGVZIlErqBVg
