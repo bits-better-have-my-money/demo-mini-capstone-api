@@ -5,6 +5,7 @@ class Product < ApplicationRecord
   validates :price, numericality: { greater_than: 0 }
   validates :description, length: { in: 10..500 }
 
+  has_many :product_categories
   has_many :orders
   # association method
   belongs_to :supplier #returns a hash of supplier data
