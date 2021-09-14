@@ -1,7 +1,8 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2NDE0NDh9.smVOFIFsgQQN8ttE9vQc9SLPQ2_QVWMffgynIMbaiek
 @hostname = http://localhost:3000
+
 ### PRODUCTS INDEX
-GET {{hostname}}/products
+GET {{hostname}}/products?category=Damage
 
 ### PRODUCTS CREATE
 POST {{hostname}}/products
