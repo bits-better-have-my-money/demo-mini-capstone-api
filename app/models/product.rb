@@ -6,6 +6,8 @@ class Product < ApplicationRecord
   validates :description, length: { in: 10..500 }
 
   has_many :product_categories
+  has_many :categories, through: :product_categories
+
   has_many :orders
   # association method
   belongs_to :supplier #returns a hash of supplier data
