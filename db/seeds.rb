@@ -43,3 +43,35 @@ ProductCategory.create!([
   {product_id: 3, category_id: 3},
   {product_id: 6, category_id: 2}
 ])
+
+Order.create!([
+  {
+    user_id: 1,
+    subtotal: nil,
+    tax: nil,
+    total: nil
+  }
+])
+
+CartedProduct.create!([
+  {
+    user_id: 1,
+    product_id: 1,
+    order_id: 1,
+    quantity: 2,
+    status: "purchased"
+  },
+  {
+    user_id: 1,
+    product_id: 3,
+    order_id: 1,
+    quantity: 2,
+    status: "purchased"
+  },
+  {
+    user_id: 2,
+    product_id: 4,
+    order_id: nil,
+    quantity: 1
+  }
+])

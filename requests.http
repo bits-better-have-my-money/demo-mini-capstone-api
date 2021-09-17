@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE2NDE0NDh9.smVOFIFsgQQN8ttE9vQc9SLPQ2_QVWMffgynIMbaiek
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzE5ODQ0NTd9.iUY0oFmnPlm-d-Crjt4CyKhBp532mIDnd2ASHC0cEIA
 @hostname = http://localhost:3000
 
 ### PRODUCTS INDEX
@@ -48,7 +48,7 @@ POST {{hostname}}/sessions
 Content-Type: application/json
 
 {
-  "email": "cheddar@gmail.com",
+  "email": "ace@gmail.com",
   "password": "password"
 }
 
@@ -62,12 +62,27 @@ POST {{hostname}}/orders
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
+### Orders SHOW
+GET {{hostname}}/orders/2
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### Carted Products Index
+GET {{hostname}}/carted_products
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### Carted Products Create
+POST {{hostname}}/carted_products
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
 {
-  "product_id": 6,
+  "product_id": 5,
   "quantity": 1
 }
 
-### Orders SHOW
-GET {{hostname}}/orders/1
+### Carted Products Update/Destroy
+PATCH {{hostname}}/carted_products/7
 Content-Type: application/json
 Authorization: Bearer {{jwt}}
